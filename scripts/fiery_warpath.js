@@ -13,7 +13,7 @@
 (function() {
     'use strict';
     if (user.environment_name === "Fiery Warpath") {
-        main()
+        fw()
     }
 })();
 
