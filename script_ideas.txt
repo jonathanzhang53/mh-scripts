@@ -1,0 +1,9 @@
+gifting script from friends list + raffle sending
+
+sort attraction bonus added to traps/bases
+
+API to fetch marketplace prices (makes it easy to do per-cost calculations such as gilded coin to see most profitable skin)
+
+charm changer for sunken city
+
+charm recommender to hit minluck (first minluck, second minluck, etc.)

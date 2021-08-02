@@ -13,7 +13,7 @@
 (function() {
     'use strict';
     if (user.environment_name === "Fiery Warpath") {
-        fw()
+        fw();
     }
 })();
 
@@ -23,16 +23,17 @@ function fw() {
     const wave_3 = ["desert_warrior_epic", "desert_scout_epic", "desert_archer_epic", "desert_cavalry_strong", "desert_mage_strong", "desert_artillery"];
     const waves = [wave_1, wave_2, wave_3];
     const wave_morale = [10, 18, 26];
-    let wave = parseInt(document.querySelector(".warpathHUD").classList[1][5])
+    let wave = parseInt(document.querySelector(".warpathHUD").classList[1][5]);
     if (wave != 4) {
         let sum = 0;
         for (let i = 0; i < waves[wave-1].length; i++) {
             let mouse_count = document.querySelector("." + waves[wave-1][i]).getElementsByClassName("warpathHUD-wave-mouse-population")[0].innerText;
             sum += parseInt(mouse_count);
         }
-        let morale_text = "<b>Support Mice Panic Meter</b><br>The Crimson Commander and Caravan Guard will retreat after " + wave_morale[wave-1] + " or fewer mice remain. Currently, " + sum + " mice remain.<div class=\"mousehuntTooltip-arrow\"></div>"
-        $("div.warpathHUD-moraleBar div.mousehuntTooltip").html(morale_text)
+        let morale_text = "<b>Support Mice Panic Meter</b><br>The Crimson Commander and Caravan Guard will retreat after " + wave_morale[wave-1] + " or fewer mice remain. Currently, " + sum + " mice remain.<div class=\"mousehuntTooltip-arrow\"></div>";
+        $("div.warpathHUD-moraleBar div.mousehuntTooltip").html(morale_text);
     }
+    return 0;
 }
 
 $(document).ajaxComplete(function(event,xhr,options){
